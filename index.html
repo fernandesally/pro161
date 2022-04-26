@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3-D Bowling Game</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"> </script>
+        <script src="throw.js"></script>
+    </head>
+    <body>
+
+<a-scene id="main-scene">
+    <a-entity
+    id="camera"
+    camera
+    position="0 1.6 1"
+    wasd-controls
+    look-controls="pointerLockEnabled:false">
+    <a-cursor>
+    <a-entity balls></a-entity>    
+    </a-cursor> 
+    </a-entity>
+    <a-plane 
+    id="ground"
+    position="0 1 0"
+    rotation="-90 0 0"
+    height="30"
+    width="4"
+    color="blue"
+    static-body
+    visible="true"></a-plane> 
+    <a-cylinder position="0 1.5 -2" color="crimson" height="0.75" radius="0.1"></a-cylinder>
+    <a-cylinder position="-0.50 1.5 -1.50" color="pink" height="0.75" radius="0.1"></a-cylinder>
+    <a-cylinder position="0.50 1.5 -1.50" color="violet" height="0.75" radius="0.1"></a-cylinder>
+
+   </a-scene>
+   </body>
+</html>
